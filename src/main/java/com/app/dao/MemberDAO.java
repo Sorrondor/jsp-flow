@@ -18,4 +18,8 @@ public class MemberDAO {
 	public String select(MemberVO memberVO) {
 		return sqlSession.selectOne("member.select", memberVO);
 	}
+	
+	public void selectIdByMemberEmail(String memberEmail) {
+//		return sqlSession.selectIdByMemberEmail("order.selectIdByMemberEmail", memberEmail);
+	}
 }	

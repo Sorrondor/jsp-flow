@@ -9,25 +9,28 @@
     <welcome-file>default.jsp</welcome-file>
     <welcome-file>default.htm</welcome-file>
   </welcome-file-list>
-  
   <servlet>
-  	<servlet-name>MemberFrontController</servlet-name>
-  	<servlet-class>com.app.member.MemberFrontController</servlet-class>
+    <servlet-name>MemberFrontController</servlet-name>
+    <servlet-class>com.app.member.MemberFrontController</servlet-class>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>MemberFrontController</servlet-name>
-  	<url-pattern>*.member</url-pattern>
+    <servlet-name>OrderFrontController</servlet-name>
+    <url-pattern>com.app.order.OrderFrontController</url-pattern>
   </servlet-mapping>
-  
   <servlet>
-  	<servlet-name>main</servlet-name>
-  	<jsp-file>/main.jsp</jsp-file>
+    <servlet-name>OrderFrontController</servlet-name>
+    <jsp-file>*.order</jsp-file>
   </servlet>
-  
   <servlet-mapping>
-  	<servlet-name>main</servlet-name>
-  	<url-pattern>/</url-pattern>
+    <servlet-name>main</servlet-name>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
-  
+  <servlet>
+    <servlet-name>main</servlet-name>
+    <jsp-file>/main.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>main</servlet-name>
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
 </web-app>

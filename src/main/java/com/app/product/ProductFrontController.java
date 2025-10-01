@@ -22,11 +22,10 @@ public class ProductFrontController extends HttpServlet{
 			result = new ProductAddController().execute(req, resp);
 		}else if(target.equals("add-ok")) {
 			result = new ProductAddOkController().execute(req, resp);
-		}else if(target.equals("login")) {
+		}else if(target.equals("list")) {
 			result = new ProductLoginController().execute(req, resp);
-		}else if(target.equals("login-ok")) {
-			
-		}else if(target.equals("login-out")) {
+		}else if(target.equals("edit")) {
+		}else if(target.equals("edit-ok")) {
 		}else {
 		}
 		
