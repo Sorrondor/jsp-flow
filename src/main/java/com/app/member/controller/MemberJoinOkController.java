@@ -11,7 +11,8 @@ import com.app.Result;
 import com.app.dao.MemberDAO;
 import com.app.vo.MemberVO;
 
-public class MemberJoinOkController implements Action{
+public class MemberJoinOkController implements Action {
+
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
@@ -23,13 +24,19 @@ public class MemberJoinOkController implements Action{
 		memberPassword = req.getParameter("memberPassword");
 		memberName = req.getParameter("memberName");
 		
-		memberVO.setMemeberEmail(memberEmail);
-		memberVO.setMemberPassword(memberEmail);
-		memberVO.setMemberName(memberEmail);
+		memberVO.setMemberEmail(memberEmail);
+		memberVO.setMemberPassword(memberPassword);
+		memberVO.setMemberName(memberName);
+		
 		memberDAO.insert(memberVO);
 		
 		result.setPath("/flow");
 		result.setRedirect(true);
+		
 		return result;
 	}
+
 }
+
+
+

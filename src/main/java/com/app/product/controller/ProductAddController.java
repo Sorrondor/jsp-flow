@@ -10,10 +10,13 @@ import com.app.Action;
 import com.app.Result;
 
 public class ProductAddController implements Action{
-
 	@Override
 	public Result execute(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
 		Result result = new Result();
+		result.setPath("/product/add.jsp");
 		return result;
 	}
 }
+
+
+

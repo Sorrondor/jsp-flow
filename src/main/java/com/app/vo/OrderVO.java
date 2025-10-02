@@ -10,7 +10,6 @@ public class OrderVO {
 	
 	public OrderVO() {;}
 	public OrderVO(Long id, Long memberId, Long productId, Integer productCount) {
-		super();
 		this.id = id;
 		this.memberId = memberId;
 		this.productId = productId;
@@ -40,8 +39,6 @@ public class OrderVO {
 	public void setProductCount(Integer productCount) {
 		this.productCount = productCount;
 	}
-	
-	
 	@Override
 	public String toString() {
 		return "OrderVO [id=" + id + ", memberId=" + memberId + ", productId=" + productId + ", productCount="
@@ -49,7 +46,7 @@ public class OrderVO {
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, memberId, productCount, productId);
+		return Objects.hash(id);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -60,8 +57,6 @@ public class OrderVO {
 		if (getClass() != obj.getClass())
 			return false;
 		OrderVO other = (OrderVO) obj;
-		return Objects.equals(id, other.id) && Objects.equals(memberId, other.memberId)
-				&& Objects.equals(productCount, other.productCount) && Objects.equals(productId, other.productId);
+		return Objects.equals(id, other.id);
 	}
-	
 }

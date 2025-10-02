@@ -3,14 +3,13 @@ package com.app.vo;
 import java.util.Objects;
 
 public class MemberVO {
-	Long id;
-	String memberEmail;
-	String memberPassword;
-	String memberName;
+	private Long id;
+	private String memberEmail;
+	private String memberPassword;
+	private String memberName;
 	
 	public MemberVO() {;}
 	public MemberVO(Long id, String memberEmail, String memberPassword, String memberName) {
-		super();
 		this.id = id;
 		this.memberEmail = memberEmail;
 		this.memberPassword = memberPassword;
@@ -22,11 +21,11 @@ public class MemberVO {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	public String getMemeberEmail() {
+	public String getMemberEmail() {
 		return memberEmail;
 	}
-	public void setMemeberEmail(String memeberEmail) {
-		this.memberEmail = memeberEmail;
+	public void setMemberEmail(String memberEmail) {
+		this.memberEmail = memberEmail;
 	}
 	public String getMemberPassword() {
 		return memberPassword;
@@ -40,16 +39,14 @@ public class MemberVO {
 	public void setMemberName(String memberName) {
 		this.memberName = memberName;
 	}
-	
-	
 	@Override
 	public String toString() {
-		return "MemberVO [id=" + id + ", memeberEmail=" + memberEmail + ", memberPassword=" + memberPassword
+		return "MemberVO [id=" + id + ", memberEmail=" + memberEmail + ", memberPassword=" + memberPassword
 				+ ", memberName=" + memberName + "]";
 	}
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, memberName, memberPassword, memberEmail);
+		return Objects.hash(id);
 	}
 	@Override
 	public boolean equals(Object obj) {
@@ -60,11 +57,6 @@ public class MemberVO {
 		if (getClass() != obj.getClass())
 			return false;
 		MemberVO other = (MemberVO) obj;
-		return Objects.equals(id, other.id) && Objects.equals(memberName, other.memberName)
-				&& Objects.equals(memberPassword, other.memberPassword)
-				&& Objects.equals(memberEmail, other.memberEmail);
+		return Objects.equals(id, other.id);
 	}
-	
-	
-	
 }

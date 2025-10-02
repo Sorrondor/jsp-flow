@@ -1,5 +1,6 @@
 package com.app.myBatis.config;
 
+import java.io.IOException;
 import java.io.Reader;
 
 import org.apache.ibatis.io.Resources;
@@ -8,14 +9,14 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class MyBatisConfig {
 	private static SqlSessionFactory sqlSessionFactory;
-	
+
 	static {
 		String resource = "com/app/myBatis/config/config.xml";
 		
 		try {
-			Reader reader= Resources.getResourceAsReader(resource);
+			Reader reader = Resources.getResourceAsReader(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
-		} catch (Exception e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
@@ -23,4 +24,5 @@ public class MyBatisConfig {
 	public static SqlSessionFactory getSqlSessionFactory() {
 		return sqlSessionFactory;
 	}
+	
 }

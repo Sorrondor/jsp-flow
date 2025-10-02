@@ -24,7 +24,7 @@ public class MemberLoginOkController implements Action {
 		
 		req.getParameter("memberEmail");
 		req.getParameter("memberPassword");
-		memberVO.setMemeberEmail(memberEmail);
+		memberVO.setMemberEmail(memberEmail);
 		memberVO.setMemberPassword(memberPassword);
 		foundMemberEmail = memberDAO.select(memberVO);
 //		아이디 혹은 비밀번호 틀림(회원정보 X)

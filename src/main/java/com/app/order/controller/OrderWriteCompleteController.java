@@ -1,4 +1,4 @@
-package com.app.order.conrtoller;
+package com.app.order.controller;
 
 import java.io.IOException;
 

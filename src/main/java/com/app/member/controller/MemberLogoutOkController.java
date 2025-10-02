@@ -18,6 +18,8 @@ public class MemberLogoutOkController implements Action {
 		HttpSession session = req.getSession();
 		
 		session.invalidate();
+		result.setPath("/flow");
+		result.setRedirect(true);
 		return result;
 	}
 

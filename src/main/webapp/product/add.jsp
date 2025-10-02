@@ -1,4 +1,3 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,6 +7,20 @@
 <title>상품 추가</title>
 </head>
 <body>
-
+	<!--  productName;
+	productPrice;
+	productStock; -->
+	<form action="/flow/add-ok.product">
+		<div>
+			<span>상품명</span><input name="productName" />
+		</div>
+		<div>
+			<span>상품가격</span><input name="productPrice" />
+		</div>
+		<div>
+			<span>상품재고</span><input name="productStock" />
+		</div>
+		<button>상품 등록</button>
+	</form>
 </body>
 </html>

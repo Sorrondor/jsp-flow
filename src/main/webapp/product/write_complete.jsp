@@ -7,7 +7,7 @@
 <title>주문 완료</title>
 </head>
 <body>
-	주문이 완료되었습니다
+	주문이 완료되었습니다.
 	<a href="/flow/list.order">주문 리스트 보러가기</a>
 </body>
 </html>

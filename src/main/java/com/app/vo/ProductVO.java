@@ -7,8 +7,9 @@ public class ProductVO {
 	private String productName;
 	private Integer productPrice;
 	private Integer productStock;
-
+	
 	public ProductVO() {;}
+
 	public ProductVO(Long id, String productName, Integer productPrice, Integer productStock) {
 		super();
 		this.id = id;
@@ -17,41 +18,49 @@ public class ProductVO {
 		this.productStock = productStock;
 	}
 
-//	getter, setter
 	public Long getId() {
 		return id;
 	}
+
 	public void setId(Long id) {
 		this.id = id;
 	}
+
 	public String getProductName() {
 		return productName;
 	}
+
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
+
 	public Integer getProductPrice() {
 		return productPrice;
 	}
+
 	public void setProductPrice(Integer productPrice) {
 		this.productPrice = productPrice;
 	}
+
 	public Integer getProductStock() {
 		return productStock;
 	}
+
 	public void setProductStock(Integer productStock) {
 		this.productStock = productStock;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "ProductVO [id=" + id + ", productName=" + productName + ", productPrice=" + productPrice
 				+ ", productStock=" + productStock + "]";
 	}
+
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, productName, productPrice, productStock);
+		return Objects.hash(id);
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -61,9 +70,7 @@ public class ProductVO {
 		if (getClass() != obj.getClass())
 			return false;
 		ProductVO other = (ProductVO) obj;
-		return Objects.equals(id, other.id) && Objects.equals(productName, other.productName)
-				&& Objects.equals(productPrice, other.productPrice) && Objects.equals(productStock, other.productStock);
+		return Objects.equals(id, other.id);
 	}
-
 	
 }
